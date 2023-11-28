@@ -8,10 +8,10 @@ def preprocess(text):
     # converts to lowercase
     text = text.lower()
     
-    # removes puncutation, non-alphabet characters
+    # removes puncutation
     text = text.translate(str.maketrans('','',string.punctuation))
-    text = ''.join(char for char in text if char.isalpha() or char.isspace())
-                   
+    text = ''.join(char for char in text if char.isalpha() or char.isspace()) 
+  
     # tokenizes words
     tokens = word_tokenize(text)
     
