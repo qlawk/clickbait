@@ -1,9 +1,9 @@
-# import modules, key stored in config
+# key stored in config
 import config
-import requests
 import pandas as pd
+import requests
 
-# gets headlines from news source as csv
+# get headlines from news source as csv
 def get_headlines(source):
     api_endpoint = 'https://newsapi.org/v2/everything'
     headers = {'Authorization': f'Bearer {config.news_key}'}
