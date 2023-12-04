@@ -35,7 +35,7 @@ def upper_count(text):
     words = text.split()
     upper_total = 0
     for word in words:
-        if word.isupper():
+        if word[0].isupper():
             upper_total += 1
     upper_ratio = upper_total / len(words)
     return upper_ratio
