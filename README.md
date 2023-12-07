@@ -61,8 +61,23 @@ While for XGBoost, the following hyperparameters were investigated:
 Eventually the best parameters were found and models were evaluated with each added features and hyperparameter change. Eventually Random Forest Classifier was chosen because of its superior accuracy (0.83 to 0.81).
 
 ## Results
+![image](https://github.com/seansjj/news_headline_classification/assets/141446128/7f2ac491-9b81-4e58-80a1-a41222b805a8)
+
+The visualization shows the top 5 most and least sensational new sources by average sensational class. The 0.5 threshold represented by a red line shows that sources above tend to be more sensationalized on average, and below would tend to be non-sensational. The colours and values on top of the bars show the number of headlines per source, with the type of news reporting labeled as well. One thing intresting of notes is that both finance news sources were most and least sensational. Looking into this, the ETF Daily News on the left reports on very short stock price updates featuring just stocks and companies tend to be capitalized, while marketscreener on the right reports finance in more a traditional reporting manner.
+
+![image](https://github.com/seansjj/news_headline_classification/assets/141446128/611b99f1-3332-487e-b79d-ef7730734736)
+
+The most significant criteria in determining sensationalism was shown to be uppercase ratio, buzzword ratio, and average word length. The uppercase ratio is hypothesized because named entities such as people or organizations, or if a headline wants to display excitement - headlines tend to be capitalized. Buzzwords tend to be adjectives, adverbs that are used to over describe headlines. For average word length, short words seem to grab attention easier than longer words such as denounced or admendment.
 
 ## Future Improvements
+There were a few challenges to this project. The Flesch-Kincaid Index is a measure for the ease of readibility that was added to the model, however the formula did not function as properly because it required a minimum 100 words - longer than every headline. Another issue was that functions required frequent bugfixing such as ratios going over 1.0 or unique words counting common words like 'the' or sensational words counting the 'day' in 'Friday'. This made me learning automatic unittesting through PyTest rather than manually testing every function.
+
+A few ways to improve predictions for this model whether via methods or new features include:
+- Integrated Unsupervised Learning: Adding clustering algorithms such as K-Means or DBScan would classify the originally unlabed global news dataset so we can make our analysis on the groupings
+- Sentimental Analysis Score: Determining if highly positive or negative sentimental scores tend to have more sensational headlines
+- TF-IDF: Analyzing if the importance of certain words compared to the entire dataset can be used to determine sensationalism
+- Part of Speech (POS) tagging: Using a NLTK librbary to train and tag word categories in a headline (noun, verb, adjective) to see if headlines w/ more adjectives, adverbs tend to be more sensational
 
 ## Credits
-- Nakatani Shuyo for their language detection library, langdetect
+- Kumar Saksham for their [Global News Dataset](https://www.kaggle.com/datasets/everydaycodings/global-news-dataset)https://www.kaggle.com/datasets/everydaycodings/global-news-dataset
+- Nakatani Shuyo for their language detection library, [langdetect](https://pypi.org/project/langdetect/)https://pypi.org/project/langdetect/
