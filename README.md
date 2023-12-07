@@ -79,5 +79,5 @@ A few ways to improve predictions for this model whether via methods or new feat
 - Part of Speech (POS) tagging: Using a NLTK librbary to train and tag word categories in a headline (noun, verb, adjective) to see if headlines w/ more adjectives, adverbs tend to be more sensational
 
 ## Credits
-- Kumar Saksham for their [Global News Dataset](https://www.kaggle.com/datasets/everydaycodings/global-news-dataset)https://www.kaggle.com/datasets/everydaycodings/global-news-dataset
-- Nakatani Shuyo for their language detection library, [langdetect](https://pypi.org/project/langdetect/)https://pypi.org/project/langdetect/
+- Kumar Saksham for their [Global News Dataset](https://www.kaggle.com/datasets/everydaycodings/global-news-dataset)
+- Nakatani Shuyo for their language detection library, [langdetect](https://pypi.org/project/langdetect/)
